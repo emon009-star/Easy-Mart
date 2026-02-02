@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop - EasyMart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <nav class="nav">
+      <div class="brand">
+        <img src="images/easy.jpg" alt="EasyMart Logo" class="brand-logo-img">
+        <span class="brand-name">EasyMart</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="shop.html">Shop</a>
+        <a href="product.html">Product</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= SPECIAL OFFER ================= -->
+  <section class="section" style="text-align:center; margin-top:50px;">
+    <div class="discount-container glass" style="justify-content:center; flex-direction:column; align-items:center; padding:40px; max-width:600px; margin:auto;">
+      <h2>🔥 Special Offer</h2>
+      <p>Get 20% OFF on selected items! Use code: <strong>EASY20</strong></p>
+      <a href="shop.html"><button class="add">Shop Now</button></a>
+    </div>
+  </section>
+
+  <!-- ================= SEARCH & FILTER ================= -->
+  <section class="section" style="margin-top:50px;">
+    <div class="search-filter glass" style="padding:25px; display:flex; flex-wrap:wrap; justify-content:center; gap:20px; align-items:center;">
+      
+      <!-- Search Box -->
+      <input type="text" placeholder="Search products..." style="padding:10px 15px; border-radius:8px; border:none; width:220px; outline:none;">
+      <button class="add">Search</button>
+
+      <!-- Category Filter -->
+      <select style="padding:10px 15px; border-radius:8px; border:none; outline:none;">
+        <option value="">All Categories</option>
+        <option value="men">Men</option>
+        <option value="women">Women</option>
+        <option value="kids">Kids</option>
+        <option value="shoes">Shoes</option>
+        <option value="watches">Watches</option>
+      </select>
+
+      <!-- Price Filter -->
+      <select style="padding:10px 15px; border-radius:8px; border:none; outline:none;">
+        <option value="">All Prices</option>
+        <option value="0-25">£0 - £25</option>
+        <option value="26-50">£26 - £50</option>
+        <option value="51-100">£51 - £100</option>
+        <option value="101-200">£101 - £200</option>
+        <option value="200+">£200+</option>
+      </select>
+
+    </div>
+  </section>
+
+  <!-- ================= SHOP PRODUCTS GRID ================= -->
+  <section class="section">
+    <h1>All Products</h1>
+    <div class="grid">
+
+      <!-- Men -->
+      <article class="card">
+        <img src="images/denim jacket.jpg" alt="Denim Jacket">
+        <div class="card-body">
+          <div class="title">Denim Jacket</div>
+          <div class="price">£69.00</div>
+          <button class="add">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/casual shirt.jpg shirt.jpg" alt="Casual Shirt">
+        <div class="card-body">
+          <div class="title">Casual Shirt</div>
+          <div class="price">£29.00</div>
+          <button class="add">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/hoddie.jpg" alt="Hoodie">
+        <div class="card-body">
+          <div class="title">Hoodie</div>
+          <div class="price">£49.00</div>
+          <button class="add">Add to Cart</button>
+        </div>
+      </article>
+
+      <!-- Women -->
+      <article class="card">
+        <img src="images/summer dress.jpg" alt="Summer Dress">
+        <div class="card-body">
+          <div class="title">Summer Dress</div>
+          <div class="price">£45.00</div>
+          <button class="add">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/evening gown.jpg" alt="Evening Gown">
+        <div class="card-body">
+          <div class="title">Evening Gown</div>
+          <div class="price">£120.00</div>
+          <button class="add">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/summer top.jpg" alt="Summer Top">
+        <div class="card-body">
+          <div class="title">Summer Top</div>
+          <div class="price">£25.00</div>
+          <button class="add">Add to Cart</button>
+        </div>
+      </article>
+
+      <!-- Kids -->
+      <article class="card">
+        <img src="images/kid hoodie.jpg" alt="Kids Hoodie">
+        <div class="card-body">
+          <div class="title">Kids Hoodie</div>
+          <div class="price">£25.00</div>
+          <button class="add">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/kid tshirt.jpg" alt="Kids T-Shirt">
+        <div class="card-body">
+          <div class="title">Kids T-Shirt</div>
+          <div class="price">£12.00</div>
+          <button class="add">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/kid dress.jpg" alt="Kids Dress">
+        <div class="card-body">
+          <div class="title">Kids Dress</div>
+          <div class="price">£30.00</div>
+          <button class="add">Add to Cart</button>
+        </div>
+      </article>
+
+      <!-- Shoes -->
+      <article class="card">
+        <img src="images/running trainer.jpg" alt="Running Trainers">
+        <div class="card-body">
+          <div class="title">Running Trainers</div>
+          <div class="price">£85.00</div>
+          <button class="add">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/Formal shoes.jpg" alt="Formal Shoes">
+        <div class="card-body">
+          <div class="title">Formal Shoes</div>
+          <div class="price">£120.00</div>
+          <button class="add">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/top sneaker.jpg" alt="High-Top Sneakers">
+        <div class="card-body">
+          <div class="title">High-Top Sneakers</div>
+          <div class="price">£95.00</div>
+          <button class="add">Add to Cart</button>
+        </div>
+      </article>
+
+      <!-- Watches -->
+      <article class="card">
+        <img src="images/luxury watch.jpg" alt="Luxury Watch">
+        <div class="card-body">
+          <div class="title">Luxury Watch</div>
+          <div class="price">£250.00</div>
+          <button class="add">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/sport watch.jpg" alt="Sport Watch">
+        <div class="card-body">
+          <div class="title">Sport Watch</div>
+          <div class="price">£140.00</div>
+          <button class="add">Add to Cart</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/minimalistwatch.jpg" alt="Minimalist Watch">
+        <div class="card-body">
+          <div class="title">Minimalist Watch</div>
+          <div class="price">£99.00</div>
+          <button class="add">Add to Cart</button>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ================= PAGINATION ================= -->
+  <section class="section" style="text-align:center; margin-top:40px;">
+    <div class="pagination" style="display:flex; justify-content:center; gap:12px;">
+      <a href="#" class="add">1</a>
+      <a href="#" class="add">2</a>
+      <a href="#" class="add">3</a>
+      <a href="#" class="add">4</a>
+      <a href="#" class="add">Next &raquo;</a>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="foot-title">Policies</div>
+        <a class="foot-link" href="#">Returns</a>
+        <a class="foot-link" href="#">Shipping</a>
+        <a class="foot-link" href="#">Privacy</a>
+      </div>
+      <div>
+        <div class="foot-title">Support</div>
+        <a class="foot-link" href="#">FAQ</a>
+        <a class="foot-link" href="#">Contact</a>
+      </div>
+      <div>
+        <div class="foot-title">Follow Us</div>
+        <a class="foot-link" href="#">Instagram</a>
+        <a class="foot-link" href="#">TikTok</a>
+        <a class="foot-link" href="#">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
