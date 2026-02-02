@@ -546,6 +546,24 @@ input[type="email"] {
   color: #4b5563;
   margin-bottom: 0;
 }
+   /* Team member circular avatar */
+.avatar {
+  /* size: responsive but clamped */
+  width: clamp(96px, 18vw, 160px);
+  aspect-ratio: 1 / 1;      /* keeps it square */
+  border-radius: 50%;       /* makes it circular */
+  object-fit: cover;        /* crops the image to fill the circle */
+  display: block;
+  margin: 0 auto 12px;      /* centers under the name */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  border: 3px solid #fff;   /* optional — remove or change color */
+}
+
+/* Fallback for very old browsers that don't support aspect-ratio */
+.team-member .avatar {
+  height: auto;
+  max-height: clamp(96px, 18vw, 160px);
+   
 /* =========================
    SHOP PAGE ORGANIZED
 ========================= */
