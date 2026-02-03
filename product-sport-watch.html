@@ -7,19 +7,13 @@
 </head>
 <body>
 
+<!-- ================= HEADER ================= -->
 <header class="header">
   <nav class="nav">
-
     <div class="brand">
-      <img src="images/easy.jpg" alt="EasyMart" class="brand-logo-img">
+      <img src="images/easy.jpg" class="brand-logo-img">
       <span class="brand-name">EasyMart</span>
     </div>
-
-    <div class="header-icons">
-      <input type="text" placeholder="Search products..." aria-label="Search products">
-      <button title="Cart" aria-label="Cart">🛒 Cart</button>
-    </div>
-
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="shop.html">Shop</a>
@@ -27,10 +21,10 @@
       <a href="account.html">Account</a>
       <a href="contact.html">Contact</a>
     </div>
-
   </nav>
 </header>
 
+<!-- ================= PRODUCT DETAILS ================= -->
 <section class="section">
   <div class="product-detail">
 
@@ -40,88 +34,124 @@
 
     <div class="product-info">
       <h1 class="product-title">Sport Watch</h1>
-      <p class="price">£60.00</p>
+      <p class="price">£140.00</p>
 
       <p class="description">
-        A durable and lightweight sport watch built for active lifestyles.
-        Features include water resistance, shock protection, and a comfortable strap.
+        A durable and lightweight sport watch built for active lifestyles.  
+        Features water resistance, shock protection, and a comfortable strap  
+        ideal for workouts, running, and outdoor adventures.
       </p>
 
       <div class="product-selectors">
         <div>
-          <label for="color">Colour:</label>
-          <select id="color">
-            <option value="">Select Colour</option>
-            <option value="black">Black</option>
-            <option value="blue">Blue</option>
-            <option value="green">Green</option>
+          <label>Strap Type:</label>
+          <select>
+            <option>Select Strap</option>
+            <option>Silicone</option>
+            <option>Nylon</option>
+            <option>Rubber</option>
           </select>
         </div>
 
         <div>
-          <label for="quantity">Quantity:</label>
-          <input type="number" id="quantity" value="1" min="1">
+          <label>Colour:</label>
+          <select>
+            <option>Select Colour</option>
+            <option>Black</option>
+            <option>Blue</option>
+            <option>Red</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Quantity:</label>
+          <input type="number" value="1" min="1">
         </div>
       </div>
 
       <button class="add-to-cart-btn">Add to Cart</button>
-
     </div>
+
   </div>
 </section>
 
+<!-- ================= CUSTOMER REVIEWS ================= -->
+<section class="section reviews">
+  <h2>Customer Reviews</h2>
+
+  <div class="review">
+    <strong>Mark T.</strong>
+    <p>⭐⭐⭐⭐⭐</p>
+    <p>Perfect for the gym and running. Lightweight and very comfortable to wear.</p>
+  </div>
+
+  <div class="review">
+    <strong>Daniel F.</strong>
+    <p>⭐⭐⭐⭐</p>
+    <p>Good battery life and durable build. Great value for the price.</p>
+  </div>
+
+  <div class="review">
+    <strong>Luke H.</strong>
+    <p>⭐⭐⭐⭐⭐</p>
+    <p>Stylish and functional. I wear it every day and it still looks brand new.</p>
+  </div>
+</section>
+
+<!-- ================= RELATED PRODUCTS ================= -->
 <section class="section related-products">
   <h2>Our Top Suggestions</h2>
   <div class="grid">
 
     <article class="card">
-      <img src="images/luxury watch.jpg" alt="Luxury Watch">
+      <img src="images/luxury watch.jpg">
       <div class="card-body">
         <div class="title">Luxury Watch</div>
-        <div class="price">£120.00</div>
+        <div class="price">£250.00</div>
         <a href="product-luxury-watch.html"><button class="add-to-cart-btn">View</button></a>
       </div>
     </article>
 
     <article class="card">
-      <img src="images/minimalistwatch.jpg" alt="Minimalist Watch">
+      <img src="images/minimalistwatch.jpg">
       <div class="card-body">
         <div class="title">Minimalist Watch</div>
-        <div class="price">£40.00</div>
+        <div class="price">£99.00</div>
         <a href="product-minimalist-watch.html"><button class="add-to-cart-btn">View</button></a>
       </div>
     </article>
 
     <article class="card">
-      <img src="images/formal shoes.jpg" alt="Formal Shoes">
+      <img src="images/leather strap watch.jpg">
       <div class="card-body">
-        <div class="title">Formal Shoes</div>
-        <div class="price">£70.00</div>
-        <a href="product-formal-shoes.html"><button class="add-to-cart-btn">View</button></a>
+        <div class="title">Leather Strap Watch</div>
+        <div class="price">£110.00</div>
+        <a href="product-leather-strap-watch.html"><button class="add-to-cart-btn">View</button></a>
       </div>
     </article>
 
   </div>
 </section>
 
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
   <div class="footer-inner">
     <div>
       <div class="foot-title">Policies</div>
-      <a class="foot-link" href="#">Returns</a>
-      <a class="foot-link" href="#">Shipping</a>
-      <a class="foot-link" href="#">Privacy</a>
+      <a class="foot-link">Returns</a>
+      <a class="foot-link">Shipping</a>
+      <a class="foot-link">Privacy</a>
     </div>
     <div>
       <div class="foot-title">Support</div>
-      <a class="foot-link" href="#">FAQ</a>
+      <a class="foot-link">FAQ</a>
       <a class="foot-link" href="contact.html">Contact</a>
     </div>
     <div>
       <div class="foot-title">Follow Us</div>
-      <a class="foot-link" href="#">Instagram</a>
-      <a class="foot-link" href="#">TikTok</a>
-      <a class="foot-link" href="#">Facebook</a>
+      <a class="foot-link">Instagram</a>
+      <a class="foot-link">TikTok</a>
+      <a class="foot-link">Facebook</a>
     </div>
   </div>
 </footer>
