@@ -5,6 +5,69 @@
   <title>EasyMart | Account</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Show/hide forgot password box */
+    #forgot-box {
+      display: none;
+      margin-top: 25px;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .forgot-toggle {
+      cursor: pointer;
+      color: #2563eb;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .forgot-toggle:hover {
+      text-decoration: underline;
+    }
+
+    /* Social login buttons */
+    .social-login {
+      margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .social-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px;
+      border-radius: 30px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: all 0.3s ease;
+      color: #fff;
+    }
+
+    .social-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .google-btn { background: #ea4335; }
+    .microsoft-btn { background: #2b579a; }
+    .facebook-btn { background: #1877f2; }
+
+    .social-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+  </style>
+
 </head>
 <body>
 
@@ -67,12 +130,43 @@
 
       <div class="account-options">
         <label><input type="checkbox"> Remember me</label>
-        <a href="#">Forgot password?</a>
+        <a class="forgot-toggle" onclick="toggleForgot()">Forgot password?</a>
       </div>
 
       <button type="submit">Login</button>
 
     </form>
+
+    <!-- SOCIAL LOGIN -->
+    <div class="social-login">
+      <button class="social-btn google-btn">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg">
+        Continue with Google
+      </button>
+
+      <button class="social-btn microsoft-btn">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoft/microsoft-original.svg">
+        Continue with Microsoft
+      </button>
+
+      <button class="social-btn facebook-btn">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg">
+        Continue with Facebook
+      </button>
+    </div>
+
+    <!-- FORGOT PASSWORD BOX -->
+    <div id="forgot-box">
+      <h3 style="font-size:20px; margin-bottom:10px; text-align:center;">Reset Password</h3>
+      <p style="font-size:14px; color:#6b7280; text-align:center; margin-bottom:15px;">
+        Enter your email and we’ll send you a reset link.
+      </p>
+
+      <form class="account-form">
+        <input type="email" placeholder="Email address" required>
+        <button type="submit">Send Reset Link</button>
+      </form>
+    </div>
 
     <!-- DIVIDER -->
     <div class="account-divider">— New to EasyMart? —</div>
@@ -130,6 +224,13 @@
     © 2026 EasyMart. All rights reserved.
   </div>
 </footer>
+
+<script>
+function toggleForgot() {
+  const box = document.getElementById("forgot-box");
+  box.style.display = box.style.display === "block" ? "none" : "block";
+}
+</script>
 
 </body>
 </html>
