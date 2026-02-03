@@ -989,6 +989,7 @@ input[type="email"] {
   font-weight: 600;
   text-decoration: none;
 }
+/* Make all inputs identical */
 .account-form input[type="text"],
 .account-form input[type="email"],
 .account-form input[type="password"] {
@@ -1005,4 +1006,33 @@ input[type="email"] {
 .account-form input:focus {
   border-color: #2563eb;
   box-shadow: 0 0 10px rgba(37, 99, 235, 0.35);
+}
+/* Medium-width social buttons */
+.social-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-btn {
+  width: 70%;          /* medium width */
+  max-width: 280px;    /* prevents being too big on large screens */
+  padding: 12px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.social-btn img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
 }
