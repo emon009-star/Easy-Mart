@@ -1056,3 +1056,11 @@ input[type="email"] {
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+.social-btn {
+  width: 70% !important;
+  max-width: 280px !important;
+}
+.social-btn img {
+  width: 18px !important;
+  height: 18px !important;
+}
