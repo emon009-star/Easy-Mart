@@ -570,6 +570,7 @@ input[type="email"] {
 .team-member .avatar {
   height: auto;
   max-height: clamp(96px, 18vw, 160px);
+}
    
 /* =========================
    SHOP PAGE ORGANIZED
@@ -876,47 +877,55 @@ input[type="email"] {
   }
 }
 /* =========================
-   ACCOUNT PAGE — FINAL FIXED VERSION
+   ACCOUNT PAGE — SAFE OVERRIDES ONLY
+   (Does NOT affect other pages)
 ========================= */
 
-/* Center the whole page */
+/* Prevent global input rules from affecting account page */
+.account-box input[type="email"],
+.account-box input[type="text"],
+.account-box input[type="password"] {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Center the account section cleanly */
 .section.account-center {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 70vh;
-  padding-top: 0;
+  margin-top: 0;
 }
 
-/* Main card */
+/* Account card */
 .account-box {
   width: 100%;
   max-width: 460px;
   padding: 45px 40px;
   border-radius: 22px;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(14px);
   box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+  animation: fadeIn 0.4s ease;
 }
 
-/* Titles */
+/* Headings */
 .account-box h2 {
   text-align: center;
   font-size: 26px;
   margin-bottom: 18px;
+  font-weight: 700;
 }
 
-/* Clean stacked form layout */
+/* Forms */
 .account-form {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
-/* FIX ALL INPUTS TO MATCH EMAIL */
-.account-form input[type="text"],
-.account-form input[type="email"],
-.account-form input[type="password"] {
+.account-form input {
   width: 100%;
   padding: 14px 16px;
   border-radius: 10px;
@@ -932,7 +941,7 @@ input[type="email"] {
   box-shadow: 0 0 10px rgba(37, 99, 235, 0.35);
 }
 
-/* Login + Signup buttons */
+/* Buttons */
 .account-form button {
   width: 100%;
   padding: 17px;
@@ -951,7 +960,7 @@ input[type="email"] {
   box-shadow: 0 15px 35px rgba(37, 99, 235, 0.4);
 }
 
-/* Remember + Forgot */
+/* Remember / Forgot */
 .account-options {
   display: flex;
   justify-content: space-between;
@@ -962,8 +971,8 @@ input[type="email"] {
 
 .account-options a {
   color: #2563eb;
-  font-weight: 500;
-  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .account-options a:hover {
@@ -973,94 +982,72 @@ input[type="email"] {
 /* Divider */
 .account-divider {
   text-align: center;
-  margin: 35px 0;
+  margin: 40px 0;
   font-size: 14px;
   color: #94a3b8;
 }
 
-/* SOCIAL LOGIN — MEDIUM SIZE */
+/* =========================
+   SOCIAL LOGIN — MATCH SCREENSHOT
+========================= */
+
 .social-login {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
+  margin-top: 25px;
 }
 
 .social-btn {
-  width: 70%;
-  max-width: 280px;
-  padding: 12px;
-  border-radius: 30px;
-  font-size: 15px;
+  width: 100% !important;
+  max-width: 360px !important;
+  padding: 14px 18px;
+  border-radius: 14px;
+  font-size: 16px;
   font-weight: 600;
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   cursor: pointer;
   border: none;
-  color: #fff;
+  color: #ffffff;
   transition: all 0.3s ease;
 }
 
-/* Social button colors */
+.social-btn img {
+  width: 18px !important;
+  height: 18px !important;
+  object-fit: contain;
+}
+
 .google-btn { background: #ea4335; }
 .microsoft-btn { background: #2b579a; }
 .facebook-btn { background: #1877f2; }
 
-/* Medium icon size */
-.social-btn img {
-  width: 18px;
-  height: 18px;
-  object-fit: contain;
-}
-
-/* Hover effect */
 .social-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
 }
 
-/* Forgot password box */
+/* =========================
+   FORGOT PASSWORD BOX
+========================= */
+
 #forgot-box {
   display: none;
-  margin-top: 25px;
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid #e5e7eb;
   animation: fadeIn 0.3s ease;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.forgot-toggle {
-  cursor: pointer;
-  color: #2563eb;
-  font-weight: 600;
-}
-
-.forgot-toggle:hover {
-  text-decoration: underline;
-}
-
-/* Spinner */
+/* Spinner (safe) */
 .spinner {
   width: 18px;
   height: 18px;
   border: 3px solid rgba(255,255,255,0.4);
-  border-top-color: #fff;
+  border-top-color: #ffffff;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-.social-btn {
-  width: 70% !important;
-  max-width: 280px !important;
-}
-.social-btn img {
-  width: 18px !important;
-  height: 18px !important;
 }
