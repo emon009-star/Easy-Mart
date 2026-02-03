@@ -12,78 +12,110 @@
 <header class="header">
   <nav class="nav">
 
-    <!-- BRAND -->
     <div class="brand">
       <img src="images/easy.jpg" alt="EasyMart Logo" class="brand-logo-img">
       <span class="brand-name">EasyMart</span>
     </div>
 
-    <!-- CENTER ICONS (Search + Cart only) -->
     <div class="header-icons">
-      <input type="text" placeholder="Search products..." aria-label="Search products">
-      <button title="Cart" aria-label="Cart">🛒 Cart</button>
+      <input type="text" placeholder="Search products...">
+      <a href="cart.html">🛒 Cart</a>
     </div>
 
-    <!-- NAV LINKS -->
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="shop.html">Shop</a>
-      <a href="account.html">Account</a>
+      <a href="account.html" aria-current="page">Account</a>
       <a href="contact.html">Contact</a>
     </div>
 
   </nav>
 </header>
 
-<!-- ================= ACCOUNT HERO ================= -->
-<section class="about-hero">
-  <h1>Your Account</h1>
-  <p>Login or create a new account to continue.</p>
-</section>
+<main>
 
-<!-- ================= ACCOUNT FORM ================= -->
-<section class="section">
-  <div class="contact-card">
-
-    <h2 style="text-align:center; margin-bottom:25px;">Login</h2>
-
-    <form class="contact-form" style="grid-template-columns:1fr;">
-
-      <input type="email" placeholder="Email Address" required>
-      <input type="password" placeholder="Password" required>
-
-      <button type="submit">Login</button>
-
-    </form>
-
-    <p style="text-align:center; margin-top:20px; font-size:15px;">
-      Don’t have an account?
-      <a href="#signup" style="color:#2563eb; font-weight:600;">Create one</a>
+<!-- ================= PAGE TITLE ================= -->
+<section class="section" style="padding-bottom:0;">
+  <div style="max-width:460px; margin:auto; text-align:center;">
+    <h1 style="font-size:32px; margin-bottom:8px;">Account</h1>
+    <p style="font-size:15px; color:#64748b;">
+      Sign in or create an account to continue
     </p>
 
+    <!-- subtle brand accent -->
+    <div style="
+      width:60px;
+      height:3px;
+      background:#2563eb;
+      margin:16px auto 0;
+      border-radius:2px;
+    "></div>
   </div>
 </section>
 
-<!-- ================= SIGNUP SECTION ================= -->
-<section class="section" id="signup">
-  <div class="contact-card">
+<!-- ================= ACCOUNT CARD ================= -->
+<section class="section">
+  <div class="contact-card" style="max-width:460px; margin:auto;">
 
-    <h2 style="text-align:center; margin-bottom:25px;">Create Account</h2>
+    <!-- LOGIN -->
+    <h2 style="text-align:center; margin-bottom:20px;">Sign In</h2>
 
     <form class="contact-form" style="grid-template-columns:1fr;">
 
-      <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Email Address" required>
-      <input type="password" placeholder="Create Password" required>
-      <input type="password" placeholder="Confirm Password" required>
+      <input type="email" placeholder="Email address" required>
+      <input type="password" placeholder="Password" required>
 
-      <button type="submit">Sign Up</button>
+      <div style="
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        font-size:14px;
+        margin-top:-10px;
+      ">
+        <label>
+          <input type="checkbox"> Remember me
+        </label>
+        <a href="#" style="color:#2563eb; font-weight:500;">
+          Forgot password?
+        </a>
+      </div>
+
+      <button type="submit" style="margin-top:15px;">
+        Login
+      </button>
+
+    </form>
+
+    <!-- DIVIDER -->
+    <div style="
+      text-align:center;
+      margin:30px 0;
+      font-size:14px;
+      color:#94a3b8;
+    ">
+      — New to EasyMart? —
+    </div>
+
+    <!-- SIGN UP -->
+    <h2 style="text-align:center; margin-bottom:20px;">Create Account</h2>
+
+    <form class="contact-form" style="grid-template-columns:1fr;">
+
+      <input type="text" placeholder="Full name" required>
+      <input type="email" placeholder="Email address" required>
+      <input type="password" placeholder="Create password" required>
+
+      <button type="submit">
+        Sign Up
+      </button>
 
     </form>
 
   </div>
 </section>
+
+</main>
 
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
@@ -115,6 +147,7 @@
     </div>
 
   </div>
+
   <div style="text-align:center; margin-top:20px; font-size:14px; color:#94a3b8;">
     © 2026 EasyMart. All rights reserved.
   </div>
