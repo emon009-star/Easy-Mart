@@ -935,3 +935,91 @@ input[type="email"] {
 .account-divider {
   margin: 45px 0;
 }
+/* =========================
+   ACCOUNT PAGE – ORGANIZED LAYOUT
+========================= */
+
+/* Space out the whole account card content */
+.account-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Group each form visually */
+.account-form {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 28px;
+  border-radius: 16px;
+  gap: 18px;
+}
+
+/* Make section titles clearer */
+.account-card h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+/* Align remember + forgot cleanly */
+.account-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5px;
+  font-size: 14px;
+}
+
+.account-options label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #374151;
+}
+
+.account-options a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.account-options a:hover {
+  text-decoration: underline;
+}
+
+/* Divider feels intentional */
+.account-divider {
+  text-align: center;
+  margin: 50px 0;
+  font-size: 14px;
+  color: #6b7280;
+  position: relative;
+}
+
+/* Helper text (terms, notes) */
+.account-helper {
+  text-align: center;
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.account-helper a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.account-helper a:hover {
+  text-decoration: underline;
+}
+
+/* Feedback placeholder stays aligned */
+.form-message {
+  min-height: 18px;
+  font-size: 14px;
+}
+.account-hero {
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+  color: #1f2937;
+}
