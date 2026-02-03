@@ -8,11 +8,12 @@
 </head>
 <body>
 
+<!-- ================= HEADER ================= -->
 <header class="header">
   <nav class="nav">
 
     <div class="brand">
-      <img src="images/easy.jpg" class="brand-logo-img">
+      <img src="images/easy.jpg" class="brand-logo-img" alt="EasyMart">
       <span class="brand-name">EasyMart</span>
     </div>
 
@@ -32,19 +33,23 @@
   </nav>
 </header>
 
+<!-- ================= MAIN ================= -->
 <main>
 
-<section class="section" style="padding-bottom:0;">
-  <div style="max-width:460px; margin:auto; text-align:center;">
-    <h1 style="font-size:32px; margin-bottom:8px;">Account</h1>
-    <p style="font-size:15px; color:#64748b;">Sign in or create an account to continue</p>
-    <div style="width:60px; height:3px; background:#2563eb; margin:16px auto 0; border-radius:2px;"></div>
+<!-- PAGE TITLE -->
+<section class="section">
+  <div class="account-title">
+    <h1>Account</h1>
+    <p>Sign in or create an account to continue</p>
+    <span class="title-line"></span>
   </div>
 </section>
 
+<!-- ACCOUNT CARD -->
 <section class="section account-center">
   <div class="account-box">
 
+    <!-- SIGN IN -->
     <h2>Sign In</h2>
 
     <form class="account-form">
@@ -52,33 +57,37 @@
       <input type="password" placeholder="Password" required>
 
       <div class="account-options">
-        <label><input type="checkbox"> Remember me</label>
+        <label>
+          <input type="checkbox"> Remember me
+        </label>
         <a class="forgot-toggle" onclick="toggleForgot()">Forgot password?</a>
       </div>
 
       <button type="submit">Login</button>
     </form>
 
+    <!-- SOCIAL LOGIN -->
     <div class="social-login">
       <button class="social-btn google-btn" onclick="startLoading(this)">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="">
         Continue with Google
       </button>
 
       <button class="social-btn microsoft-btn" onclick="startLoading(this)">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="">
         Continue with Microsoft
       </button>
 
       <button class="social-btn facebook-btn" onclick="startLoading(this)">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="">
         Continue with Facebook
       </button>
     </div>
 
+    <!-- FORGOT PASSWORD -->
     <div id="forgot-box">
-      <h3 style="text-align:center; margin-bottom:10px;">Reset Password</h3>
-      <p style="font-size:14px; color:#6b7280; text-align:center;">Enter your email to receive a reset link.</p>
+      <h3>Reset Password</h3>
+      <p>Enter your email to receive a reset link.</p>
 
       <form class="account-form">
         <input type="email" placeholder="Email address" required>
@@ -88,6 +97,7 @@
 
     <div class="account-divider">— New to EasyMart? —</div>
 
+    <!-- SIGN UP -->
     <h2>Create Account</h2>
 
     <form class="account-form">
@@ -102,8 +112,10 @@
 
 </main>
 
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
   <div class="footer-inner">
+
     <div>
       <div class="foot-title">EasyMart</div>
       <p>Premium fashion & lifestyle essentials you can trust.</p>
@@ -128,13 +140,15 @@
       <a class="foot-link">TikTok</a>
       <a class="foot-link">Facebook</a>
     </div>
+
   </div>
 
-  <div style="text-align:center; margin-top:20px; font-size:14px; color:#94a3b8;">
+  <div class="footer-bottom">
     © 2026 EasyMart. All rights reserved.
   </div>
 </footer>
 
+<!-- ================= SCRIPT ================= -->
 <script>
 function toggleForgot() {
   const box = document.getElementById("forgot-box");
