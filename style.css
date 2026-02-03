@@ -1051,3 +1051,30 @@ input[type="email"] {
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
+/* =========================
+   TEAM MEMBER — FIXED CENTER CIRCLE
+========================= */
+
+.team-member {
+  display: flex;
+  justify-content: center;
+}
+
+.team-member .avatar {
+  width: clamp(120px, 20vw, 180px);
+  height: clamp(120px, 20vw, 180px);
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+/* =========================
+   ACCOUNT PAGE — LOCK POSITION
+========================= */
+
+.section.account-center {
+  min-height: 100vh;
+  align-items: flex-start !important;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
