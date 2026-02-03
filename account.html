@@ -33,20 +33,20 @@
   </nav>
 </header>
 
-<!-- ================= MAIN ================= -->
+<!-- ================= ACCOUNT ================= -->
 <main>
 
 <section class="section account-center">
   <div class="account-box">
 
-    <!-- PAGE TITLE -->
+    <!-- TITLE -->
     <h1 style="text-align:center; font-size:32px; margin-bottom:6px;">Account</h1>
     <p style="text-align:center; color:#64748b; margin-bottom:30px;">
       Sign in or create an account to continue
     </p>
 
     <!-- SIGN IN -->
-    <h2>Sign In</h2>
+    <h2 style="margin-bottom:12px;">Sign In</h2>
 
     <form class="account-form">
       <input type="email" placeholder="Email address" required>
@@ -56,34 +56,36 @@
         <label>
           <input type="checkbox"> Remember me
         </label>
-        <a onclick="toggleForgot()">Forgot password?</a>
+        <a href="javascript:void(0)" onclick="toggleForgot()" style="color:#2563eb; cursor:pointer;">
+          Forgot password?
+        </a>
       </div>
 
       <button type="submit">Login</button>
     </form>
 
     <!-- SOCIAL LOGIN -->
-    <div class="social-login">
+    <div class="social-login" style="margin-top:22px;">
       <button class="social-btn google-btn" onclick="startLoading(this)">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" width="20">
         Continue with Google
       </button>
 
       <button class="social-btn microsoft-btn" onclick="startLoading(this)">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" width="20">
         Continue with Microsoft
       </button>
 
       <button class="social-btn facebook-btn" onclick="startLoading(this)">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" width="20">
         Continue with Facebook
       </button>
     </div>
 
     <!-- FORGOT PASSWORD -->
-    <div id="forgot-box">
-      <h3 style="text-align:center;">Reset Password</h3>
-      <p style="text-align:center; color:#6b7280;">
+    <div id="forgot-box" style="display:none; margin-top:30px;">
+      <h3 style="text-align:center; margin-bottom:8px;">Reset Password</h3>
+      <p style="text-align:center; color:#6b7280; margin-bottom:18px;">
         Enter your email to receive a reset link.
       </p>
 
@@ -93,10 +95,11 @@
       </form>
     </div>
 
-    <!-- SIGN UP -->
+    <!-- DIVIDER -->
     <div class="account-divider">— New to EasyMart? —</div>
 
-    <h2>Create Account</h2>
+    <!-- SIGN UP -->
+    <h2 style="margin-bottom:12px;">Create Account</h2>
 
     <form class="account-form">
       <input type="text" placeholder="Full name" required>
