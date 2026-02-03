@@ -43,7 +43,6 @@
       Sign in or create an account to continue
     </p>
 
-    <!-- subtle brand accent -->
     <div style="
       width:60px;
       height:3px;
@@ -55,60 +54,39 @@
 </section>
 
 <!-- ================= ACCOUNT CARD ================= -->
-<section class="section">
-  <div class="contact-card" style="max-width:460px; margin:auto;">
+<section class="section account-center">
+  <div class="account-box">
 
     <!-- LOGIN -->
-    <h2 style="text-align:center; margin-bottom:20px;">Sign In</h2>
+    <h2>Sign In</h2>
 
-    <form class="contact-form" style="grid-template-columns:1fr;">
+    <form class="account-form">
 
       <input type="email" placeholder="Email address" required>
       <input type="password" placeholder="Password" required>
 
-      <div style="
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-        font-size:14px;
-        margin-top:-10px;
-      ">
-        <label>
-          <input type="checkbox"> Remember me
-        </label>
-        <a href="#" style="color:#2563eb; font-weight:500;">
-          Forgot password?
-        </a>
+      <div class="account-options">
+        <label><input type="checkbox"> Remember me</label>
+        <a href="#">Forgot password?</a>
       </div>
 
-      <button type="submit" style="margin-top:15px;">
-        Login
-      </button>
+      <button type="submit">Login</button>
 
     </form>
 
     <!-- DIVIDER -->
-    <div style="
-      text-align:center;
-      margin:30px 0;
-      font-size:14px;
-      color:#94a3b8;
-    ">
-      — New to EasyMart? —
-    </div>
+    <div class="account-divider">— New to EasyMart? —</div>
 
     <!-- SIGN UP -->
-    <h2 style="text-align:center; margin-bottom:20px;">Create Account</h2>
+    <h2>Create Account</h2>
 
-    <form class="contact-form" style="grid-template-columns:1fr;">
+    <form class="account-form">
 
       <input type="text" placeholder="Full name" required>
       <input type="email" placeholder="Email address" required>
       <input type="password" placeholder="Create password" required>
 
-      <button type="submit">
-        Sign Up
-      </button>
+      <button type="submit">Sign Up</button>
 
     </form>
 
