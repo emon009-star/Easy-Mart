@@ -876,109 +876,91 @@ input[type="email"] {
   }
 }
 /* =========================
-   ACCOUNT PAGE – DECORATION FIX
+   ACCOUNT PAGE — PREMIUM REDESIGN
 ========================= */
 
-.account-options {
+/* Center the whole page */
+.section.account-center {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin: 12px 0 18px;
-  font-size: 14px;
+  min-height: 70vh;
+  padding-top: 0;
 }
 
-.account-options label {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-weight: 500;
-  color: #374151;
+/* Main card */
+.account-box {
+  width: 100%;
+  max-width: 460px;
+  padding: 45px 40px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.12);
 }
 
-.account-options a {
-  color: #2563eb;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.account-options a:hover {
-  text-decoration: underline;
-}
-
-/* Helper text (terms, notes) */
-.account-helper {
-  font-size: 13px;
-  color: #6b7280;
+/* Titles */
+.account-box h2 {
   text-align: center;
-  margin: 18px 0 10px;
-  line-height: 1.5;
+  font-size: 26px;
+  margin-bottom: 18px;
 }
 
-.account-helper a {
-  color: #2563eb;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.account-helper a:hover {
-  text-decoration: underline;
-}
-
-/* Form feedback placeholder */
-.form-message {
-  min-height: 18px;
-  margin-bottom: 10px;
-  font-size: 14px;
-}
-
-/* Divider spacing improvement */
-.account-divider {
-  margin: 45px 0;
-}
-/* =========================
-   ACCOUNT PAGE – ORGANIZED LAYOUT
-========================= */
-
-/* Space out the whole account card content */
-.account-card {
+/* Clean stacked form layout */
+.account-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-}
-
-/* Group each form visually */
-.account-form {
-  background: rgba(255, 255, 255, 0.6);
-  padding: 28px;
-  border-radius: 16px;
   gap: 18px;
 }
 
-/* Make section titles clearer */
-.account-card h2 {
-  font-size: 26px;
-  margin-bottom: 10px;
+/* Inputs */
+.account-form input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #cbd5f5;
+  font-size: 15px;
+  outline: none;
+  background: #ffffff;
+  transition: all 0.3s ease;
 }
 
-/* Align remember + forgot cleanly */
+.account-form input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.35);
+}
+
+/* Login + Signup buttons */
+.account-form button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  transition: all 0.3s ease;
+}
+
+.account-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.4);
+}
+
+/* Remember + Forgot */
 .account-options {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 5px;
   font-size: 14px;
-}
-
-.account-options label {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: #374151;
+  margin-top: -10px;
 }
 
 .account-options a {
   color: #2563eb;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -986,40 +968,24 @@ input[type="email"] {
   text-decoration: underline;
 }
 
-/* Divider feels intentional */
+/* Divider */
 .account-divider {
   text-align: center;
-  margin: 50px 0;
+  margin: 35px 0;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* Footer text under forms */
+.account-footer {
+  text-align: center;
   font-size: 14px;
   color: #6b7280;
-  position: relative;
+  margin-top: 20px;
 }
 
-/* Helper text (terms, notes) */
-.account-helper {
-  text-align: center;
-  font-size: 13px;
-  color: #6b7280;
-  line-height: 1.5;
-  margin-top: 10px;
-}
-
-.account-helper a {
+.account-footer a {
   color: #2563eb;
   font-weight: 600;
   text-decoration: none;
-}
-
-.account-helper a:hover {
-  text-decoration: underline;
-}
-
-/* Feedback placeholder stays aligned */
-.form-message {
-  min-height: 18px;
-  font-size: 14px;
-}
-.account-hero {
-  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
-  color: #1f2937;
 }
