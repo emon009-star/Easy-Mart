@@ -570,7 +570,6 @@ input[type="email"] {
 .team-member .avatar {
   height: auto;
   max-height: clamp(96px, 18vw, 160px);
-}
    
 /* =========================
    SHOP PAGE ORGANIZED
