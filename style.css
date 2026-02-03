@@ -876,7 +876,7 @@ input[type="email"] {
   }
 }
 /* =========================
-   ACCOUNT PAGE — PREMIUM REDESIGN
+   ACCOUNT PAGE — FINAL FIXED VERSION
 ========================= */
 
 /* Center the whole page */
@@ -913,8 +913,10 @@ input[type="email"] {
   gap: 18px;
 }
 
-/* Inputs */
-.account-form input {
+/* FIX ALL INPUTS TO MATCH EMAIL */
+.account-form input[type="text"],
+.account-form input[type="email"],
+.account-form input[type="password"] {
   width: 100%;
   padding: 14px 16px;
   border-radius: 10px;
@@ -933,10 +935,10 @@ input[type="email"] {
 /* Login + Signup buttons */
 .account-form button {
   width: 100%;
-  padding: 15px;
-  border-radius: 30px;
+  padding: 17px;
+  border-radius: 32px;
   border: none;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
   cursor: pointer;
   color: #ffffff;
@@ -976,38 +978,7 @@ input[type="email"] {
   color: #94a3b8;
 }
 
-/* Footer text under forms */
-.account-footer {
-  text-align: center;
-  font-size: 14px;
-  color: #6b7280;
-  margin-top: 20px;
-}
-
-.account-footer a {
-  color: #2563eb;
-  font-weight: 600;
-  text-decoration: none;
-}
-/* Make all inputs identical */
-.account-form input[type="text"],
-.account-form input[type="email"],
-.account-form input[type="password"] {
-  width: 100%;
-  padding: 14px 16px;
-  border-radius: 10px;
-  border: 1px solid #cbd5f5;
-  font-size: 15px;
-  outline: none;
-  background: #ffffff;
-  transition: all 0.3s ease;
-}
-
-.account-form input:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 10px rgba(37, 99, 235, 0.35);
-}
-/* Medium-width social buttons */
+/* SOCIAL LOGIN — MEDIUM SIZE */
 .social-login {
   display: flex;
   flex-direction: column;
@@ -1016,8 +987,8 @@ input[type="email"] {
 }
 
 .social-btn {
-  width: 70%;          /* medium width */
-  max-width: 280px;    /* prevents being too big on large screens */
+  width: 70%;
+  max-width: 280px;
   padding: 12px;
   border-radius: 30px;
   font-size: 15px;
@@ -1031,8 +1002,57 @@ input[type="email"] {
   color: #fff;
   transition: all 0.3s ease;
 }
+
+/* Social button colors */
+.google-btn { background: #ea4335; }
+.microsoft-btn { background: #2b579a; }
+.facebook-btn { background: #1877f2; }
+
+/* Medium icon size */
 .social-btn img {
   width: 18px;
   height: 18px;
   object-fit: contain;
+}
+
+/* Hover effect */
+.social-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Forgot password box */
+#forgot-box {
+  display: none;
+  margin-top: 25px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.forgot-toggle {
+  cursor: pointer;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.forgot-toggle:hover {
+  text-decoration: underline;
+}
+
+/* Spinner */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255,255,255,0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
