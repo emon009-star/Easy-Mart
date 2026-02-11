@@ -1115,3 +1115,102 @@ input[type="email"] {
   padding-top: 10px;
   border-top: 1px solid #e2e8f0;
 }
+/* =========================
+   ACCOUNT PAGE – MODERN STARTUP STYLE
+========================= */
+
+/* Soft gradient background for account section */
+.section.account-center {
+  background: linear-gradient(135deg, #eef2ff, #e0f2fe);
+  padding: 140px 20px;
+  border-radius: 40px;
+}
+
+/* Floating white card */
+.account-box {
+  max-width: 520px;
+  margin: auto;
+  padding: 55px 45px;
+  border-radius: 28px;
+  background: #ffffff;
+  box-shadow: 
+    0 40px 80px rgba(30, 64, 175, 0.15),
+    0 15px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+/* Stronger heading hierarchy */
+.account-box h1 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.account-box > p {
+  font-size: 15px;
+  color: #64748b;
+  margin-bottom: 40px;
+}
+
+/* Cleaner section titles */
+.account-box h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 35px;
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+/* Modern inputs */
+.account-form input {
+  padding: 15px 18px;
+  border-radius: 12px;
+  border: 1px solid #dbeafe;
+  background: #f8fafc;
+  transition: all 0.25s ease;
+}
+
+.account-form input:focus {
+  background: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+/* Stripe-style primary button */
+.account-form button {
+  padding: 16px;
+  border-radius: 14px;
+  font-weight: 600;
+  background: #2563eb;
+  transition: all 0.25s ease;
+}
+
+.account-form button:hover {
+  background: #1e40af;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.35);
+}
+
+/* Social buttons modern */
+.social-btn {
+  border-radius: 14px;
+  padding: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #111827;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.social-btn:hover {
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+/* Divider subtle */
+.account-divider {
+  margin: 50px 0;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
