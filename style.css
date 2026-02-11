@@ -895,278 +895,65 @@ input[type="email"] {
   margin: 0 auto;
 }
 /* =========================
-   ACCOUNT PAGE — FINAL LOCKED LAYOUT
-   (SAFE: affects ONLY account page)
-========================= */
-
-/* Stop flex / grid / vh issues */
-.section.account-center {
-  display: block !important;
-  padding: 100px 20px !important;
-  min-height: auto !important;
-}
-
-/* Center card exactly like desktop */
-.account-box {
-  max-width: 480px !important;
-  margin: 0 auto !important;
-  padding: 45px 40px;
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(14px);
-  box-shadow: 0 25px 60px rgba(0,0,0,0.12);
-}
-
-/* Lock form layout */
-.account-form {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 18px;
-}
-
-/* Force inputs full width */
-.account-form input {
-  width: 100% !important;
-  max-width: 100% !important;
-  padding: 14px 16px;
-  border-radius: 10px;
-  border: 1px solid #cbd5f5;
-  font-size: 15px;
-  outline: none;
-}
-
-/* Remember / Forgot row */
-.account-options {
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  width: 100%;
-  font-size: 14px;
-}
-
-/* Login button */
-.account-form button {
-  width: 100% !important;
-  padding: 17px;
-  border-radius: 32px;
-  border: none;
-  font-size: 17px;
-  font-weight: 600;
-  cursor: pointer;
-  color: #ffffff;
-  background: linear-gradient(135deg, #2563eb, #1e40af);
-}
-
-/* Divider */
-.account-divider {
-  text-align: center;
-  margin: 35px 0;
-  font-size: 14px;
-  color: #94a3b8;
-}
-
-/* Social login stack */
-.social-login {
-  display: flex !important;
-  flex-direction: column !important;
-  width: 100%;
-  gap: 14px;
-}
-
-/* Social buttons full width */
-.social-btn {
-  width: 100% !important;
-  max-width: 100% !important;
-  padding: 14px 18px;
-  border-radius: 14px;
-  font-size: 16px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  cursor: pointer;
-  border: none;
-  color: #ffffff;
-}
-
-/* Protect from global CSS bleed */
-.account-box * {
-  box-sizing: border-box;
-}
-
-/* Reset any inherited grid */
-.account-box form,
-.account-box .grid {
-  display: block !important;
-}
-
-/* =========================
-   ACCOUNT PAGE – CLEAN POLISH (CSS ONLY)
-========================= */
-
-/* More breathing space */
-.section.account-center {
-  padding: 120px 20px;
-}
-
-/* Title improvements */
-.account-box h1 {
-  text-align: center;
-  font-size: 34px;
-  font-weight: 700;
-  margin-bottom: 6px;
-}
-
-.account-box > p {
-  text-align: center;
-  color: #64748b;
-  margin-bottom: 35px;
-  font-size: 15px;
-}
-
-/* Section headings */
-.account-box h2 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-top: 35px;
-  margin-bottom: 14px;
-  color: #111827;
-}
-
-/* Inputs better look */
-.account-form input {
-  transition: all 0.3s ease;
-}
-
-.account-form input:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
-}
-
-/* Buttons smoother */
-.account-form button {
-  transition: all 0.3s ease;
-}
-
-.account-form button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
-}
-
-/* Divider with lines */
-.account-divider {
-  position: relative;
-  text-align: center;
-  margin: 45px 0;
-  font-size: 14px;
-  color: #94a3b8;
-}
-
-.account-divider::before,
-.account-divider::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 32%;
-  height: 1px;
-  background: #e2e8f0;
-}
-
-.account-divider::before {
-  left: 0;
-}
-
-.account-divider::after {
-  right: 0;
-}
-
-/* Social buttons polish */
-.social-btn {
-  transition: all 0.3s ease;
-  border: 1px solid #e5e7eb;
-}
-
-.social-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-}
-
-/* Brand styles */
-.google-btn {
-  background: #ffffff;
-  color: #111827;
-}
-
-.microsoft-btn {
-  background: #ffffff;
-  color: #111827;
-}
-
-.facebook-btn {
-  background: #1877f2;
-  color: #ffffff;
-  border: none;
-}
-
-/* Forgot password box smooth appearance (no JS change needed) */
-#forgot-box {
-  margin-top: 30px;
-  padding-top: 10px;
-  border-top: 1px solid #e2e8f0;
-}
-/* =========================
    ACCOUNT PAGE – MODERN STARTUP STYLE
 ========================= */
 
-/* Soft gradient background for account section */
+/* Background area */
 .section.account-center {
   background: linear-gradient(135deg, #eef2ff, #e0f2fe);
-  padding: 140px 20px;
+  padding: 120px 20px;
   border-radius: 40px;
 }
 
-/* Floating white card */
+/* Centered card */
 .account-box {
   max-width: 520px;
   margin: auto;
-  padding: 55px 45px;
+  padding: 60px 45px;
   border-radius: 28px;
   background: #ffffff;
-  box-shadow: 
-    0 40px 80px rgba(30, 64, 175, 0.15),
-    0 15px 30px rgba(0, 0, 0, 0.05);
+  box-shadow:
+    0 40px 80px rgba(30, 64, 175, 0.12),
+    0 20px 40px rgba(0, 0, 0, 0.05);
   border: 1px solid #e2e8f0;
 }
 
-/* Stronger heading hierarchy */
+/* Title */
 .account-box h1 {
-  font-size: 34px;
+  font-size: 32px;
   font-weight: 700;
   margin-bottom: 8px;
+  text-align: center;
 }
 
+/* Subtitle */
 .account-box > p {
-  font-size: 15px;
+  text-align: center;
   color: #64748b;
   margin-bottom: 40px;
 }
 
-/* Cleaner section titles */
+/* Section titles */
 .account-box h2 {
   font-size: 18px;
-  font-weight: 600;
-  margin-top: 35px;
-  margin-bottom: 16px;
-  color: #111827;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 
-/* Modern inputs */
+/* Form layout */
+.account-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Inputs */
 .account-form input {
   padding: 15px 18px;
   border-radius: 12px;
   border: 1px solid #dbeafe;
   background: #f8fafc;
+  font-size: 15px;
   transition: all 0.25s ease;
 }
 
@@ -1176,13 +963,23 @@ input[type="email"] {
   box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
 }
 
-/* Stripe-style primary button */
+/* Options row */
+.account-options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+/* Main buttons */
 .account-form button {
-  padding: 16px;
+  padding: 15px;
   border-radius: 14px;
-  font-weight: 600;
+  border: none;
   background: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
   transition: all 0.25s ease;
+  cursor: pointer;
 }
 
 .account-form button:hover {
@@ -1191,14 +988,21 @@ input[type="email"] {
   box-shadow: 0 15px 30px rgba(37, 99, 235, 0.35);
 }
 
-/* Social buttons modern */
+/* Social login */
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 25px;
+}
+
 .social-btn {
-  border-radius: 14px;
   padding: 14px;
-  background: #f8fafc;
+  border-radius: 14px;
   border: 1px solid #e2e8f0;
-  color: #111827;
+  background: #f8fafc;
   font-weight: 600;
+  cursor: pointer;
   transition: all 0.25s ease;
 }
 
@@ -1208,9 +1012,18 @@ input[type="email"] {
   transform: translateY(-2px);
 }
 
-/* Divider subtle */
+/* Divider */
 .account-divider {
   margin: 50px 0;
-  font-size: 13px;
-  letter-spacing: 0.5px;
+  text-align: center;
+  font-size: 14px;
+  color: #94a3b8;
 }
+
+/* Forgot password box */
+#forgot-box {
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #e2e8f0;
+}
+
