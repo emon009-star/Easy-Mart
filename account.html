@@ -2,162 +2,146 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>EasyMart | Account</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Login - EasyMart</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Minor adjustments for account login form */
+    .account-box h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 28px;
+      color: #1e40af;
+    }
+
+    .account-box input[type="email"],
+    .account-box input[type="password"] {
+      width: 100%;
+      padding: 14px 16px;
+      margin-bottom: 18px;
+      border-radius: 12px;
+      border: 1px solid #cbd5f5;
+      outline: none;
+      font-size: 16px;
+    }
+
+    .account-box input:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 10px rgba(37, 99, 235, 0.35);
+    }
+
+    .account-box button {
+      width: 100%;
+      padding: 14px;
+      border-radius: 30px;
+      border: none;
+      background: linear-gradient(135deg, #2563eb, #1e40af);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .account-box button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 25px rgba(37, 99, 235, 0.35);
+      background: linear-gradient(135deg, #1e40af, #2563eb);
+    }
+
+    .account-box .links {
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    .account-box .links a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .account-box .links a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
-<!-- ================= HEADER ================= -->
-<header class="header">
-  <nav class="nav">
-
-    <div class="brand">
-      <img src="images/easy.jpg" class="brand-logo-img" alt="EasyMart">
-      <span class="brand-name">EasyMart</span>
-    </div>
-
-    <div class="header-icons">
-      <input type="text" placeholder="Search products...">
-      <a href="cart.html">🛒 Cart</a>
-    </div>
-
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="shop.html">Shop</a>
-      <a href="account.html" aria-current="page">Account</a>
-      <a href="contact.html">Contact</a>
-    </div>
-
-  </nav>
-</header>
-
-<!-- ================= ACCOUNT ================= -->
-<main>
-
-<section class="section account-center">
-  <div class="account-box">
-
-    <!-- TITLE -->
-    <h1 style="text-align:center; font-size:32px; margin-bottom:6px;">Account</h1>
-    <p style="text-align:center; color:#64748b; margin-bottom:30px;">
-      Sign in or create an account to continue
-    </p>
-
-    <!-- SIGN IN -->
-    <h2 style="margin-bottom:12px;">Sign In</h2>
-
-    <form class="account-form">
-      <input type="email" placeholder="Email address" required>
-      <input type="password" placeholder="Password" required>
-
-      <div class="account-options">
-        <label>
-          <input type="checkbox"> Remember me
-        </label>
-        <a href="javascript:void(0)" onclick="toggleForgot()" style="color:#2563eb; cursor:pointer;">
-          Forgot password?
-        </a>
+  <!-- HEADER / NAVBAR -->
+  <header class="header">
+    <nav class="nav">
+      <div class="brand">
+        <img src="images/easy.jpg" alt="EasyMart Logo" class="brand-logo-img">
+        <span class="brand-name">EasyMart</span>
       </div>
 
-      <button type="submit">Login</button>
-    </form>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="shop.html">Shop</a>
+        <a href="account.html">Account</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-    <!-- SOCIAL LOGIN -->
-    <div class="social-login" style="margin-top:22px;">
-      <button class="social-btn google-btn" onclick="startLoading(this)">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" width="20">
-        Continue with Google
-      </button>
-
-      <button class="social-btn microsoft-btn" onclick="startLoading(this)">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" width="20">
-        Continue with Microsoft
-      </button>
-
-      <button class="social-btn facebook-btn" onclick="startLoading(this)">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" width="20">
-        Continue with Facebook
-      </button>
-    </div>
-
-    <!-- FORGOT PASSWORD -->
-    <div id="forgot-box" style="display:none; margin-top:30px;">
-      <h3 style="text-align:center; margin-bottom:8px;">Reset Password</h3>
-      <p style="text-align:center; color:#6b7280; margin-bottom:18px;">
-        Enter your email to receive a reset link.
-      </p>
-
-      <form class="account-form">
-        <input type="email" placeholder="Email address" required>
-        <button type="submit">Send Reset Link</button>
+  <!-- ACCOUNT LOGIN SECTION -->
+  <section class="section account-center">
+    <div class="account-box glass">
+      <h2>Login to Your Account</h2>
+      <form action="login-process.php" method="POST">
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
       </form>
+      <div class="links">
+        <p><a href="forgot-password.html">Forgot Password?</a></p>
+        <p><a href="register.html">Create an Account</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-premium">
+    <div class="footer-container">
+
+      <div class="footer-col">
+        <h3>EasyMart</h3>
+        <p>Your trusted destination for quality products and exceptional service.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Customer Service</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Email: support@easymart.com</p>
+        <p>Phone: +44 1234 567890</p>
+        <p>London, United Kingdom</p>
+      </div>
+
     </div>
 
-    <!-- DIVIDER -->
-    <div class="account-divider">— New to EasyMart? —</div>
-
-    <!-- SIGN UP -->
-    <h2 style="margin-bottom:12px;">Create Account</h2>
-
-    <form class="account-form">
-      <input type="text" placeholder="Full name" required>
-      <input type="email" placeholder="Email address" required>
-      <input type="password" placeholder="Create password" required>
-      <button type="submit">Sign Up</button>
-    </form>
-
-  </div>
-</section>
-
-</main>
-
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div>
-      <div class="foot-title">EasyMart</div>
-      <p>Premium fashion & lifestyle essentials you can trust.</p>
+    <div class="footer-bottom">
+      <p>© 2026 EasyMart. All rights reserved.</p>
     </div>
-    <div>
-      <div class="foot-title">Policies</div>
-      <a class="foot-link">Returns</a>
-      <a class="foot-link">Shipping</a>
-      <a class="foot-link">Privacy</a>
-    </div>
-    <div>
-      <div class="foot-title">Support</div>
-      <a class="foot-link">FAQ</a>
-      <a class="foot-link" href="contact.html">Contact</a>
-    </div>
-    <div>
-      <div class="foot-title">Follow Us</div>
-      <a class="foot-link">Instagram</a>
-      <a class="foot-link">TikTok</a>
-      <a class="foot-link">Facebook</a>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    © 2026 EasyMart. All rights reserved.
-  </div>
-</footer>
-
-<!-- ================= SCRIPT ================= -->
-<script>
-function toggleForgot() {
-  const box = document.getElementById("forgot-box");
-  box.style.display = box.style.display === "block" ? "none" : "block";
-}
-
-function startLoading(btn) {
-  btn.innerHTML = '<div class="spinner"></div>';
-  btn.disabled = true;
-  btn.style.opacity = "0.7";
-}
-</script>
+  </footer>
 
 </body>
 </html>
-
