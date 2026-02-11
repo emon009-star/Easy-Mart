@@ -1027,3 +1027,44 @@ input[type="email"] {
   border-top: 1px solid #e2e8f0;
 }
 
+/* ===== FORCE ACCOUNT PAGE STYLING ===== */
+
+body .account-center {
+  background: linear-gradient(135deg, #eef2ff, #e0f2fe) !important;
+  padding: 120px 20px !important;
+}
+
+body .account-box {
+  max-width: 520px !important;
+  margin: 0 auto !important;
+  padding: 60px 45px !important;
+  background: #ffffff !important;
+  border-radius: 28px !important;
+  box-shadow: 0 40px 80px rgba(30, 64, 175, 0.15) !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+body .account-form input {
+  padding: 16px 18px !important;
+  border-radius: 12px !important;
+  border: 1px solid #dbeafe !important;
+  background: #f8fafc !important;
+}
+
+body .account-form input:focus {
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 4px rgba(37,99,235,0.15) !important;
+}
+
+body .account-form button {
+  padding: 15px !important;
+  border-radius: 14px !important;
+  background: #2563eb !important;
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+body .account-form button:hover {
+  background: #1e40af !important;
+  transform: translateY(-2px);
+}
