@@ -1001,3 +1001,117 @@ input[type="email"] {
   display: block !important;
 }
 
+/* =========================
+   ACCOUNT PAGE – CLEAN POLISH (CSS ONLY)
+========================= */
+
+/* More breathing space */
+.section.account-center {
+  padding: 120px 20px;
+}
+
+/* Title improvements */
+.account-box h1 {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.account-box > p {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 35px;
+  font-size: 15px;
+}
+
+/* Section headings */
+.account-box h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 35px;
+  margin-bottom: 14px;
+  color: #111827;
+}
+
+/* Inputs better look */
+.account-form input {
+  transition: all 0.3s ease;
+}
+
+.account-form input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Buttons smoother */
+.account-form button {
+  transition: all 0.3s ease;
+}
+
+.account-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
+}
+
+/* Divider with lines */
+.account-divider {
+  position: relative;
+  text-align: center;
+  margin: 45px 0;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.account-divider::before,
+.account-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 32%;
+  height: 1px;
+  background: #e2e8f0;
+}
+
+.account-divider::before {
+  left: 0;
+}
+
+.account-divider::after {
+  right: 0;
+}
+
+/* Social buttons polish */
+.social-btn {
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* Brand styles */
+.google-btn {
+  background: #ffffff;
+  color: #111827;
+}
+
+.microsoft-btn {
+  background: #ffffff;
+  color: #111827;
+}
+
+.facebook-btn {
+  background: #1877f2;
+  color: #ffffff;
+  border: none;
+}
+
+/* Forgot password box smooth appearance (no JS change needed) */
+#forgot-box {
+  margin-top: 30px;
+  padding-top: 10px;
+  border-top: 1px solid #e2e8f0;
+}
