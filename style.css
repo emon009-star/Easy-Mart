@@ -1068,3 +1068,81 @@ body .account-form button:hover {
   background: #1e40af !important;
   transform: translateY(-2px);
 }
+/* ===== ACCOUNT PAGE FINAL STYLE ===== */
+
+.account-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2ff, #e0f2fe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px;
+}
+
+.account-card {
+  width: 100%;
+  max-width: 520px;
+  background: #ffffff;
+  padding: 60px 45px;
+  border-radius: 30px;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.08);
+}
+
+.account-card h1 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 40px;
+}
+
+.account-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.account-form input {
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.primary-btn {
+  padding: 15px;
+  border-radius: 14px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background: #1e40af;
+}
+
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.social-btn {
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  cursor: pointer;
+}
+
+.divider {
+  margin: 50px 0;
+  text-align: center;
+  color: #94a3b8;
+}
