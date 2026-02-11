@@ -36,14 +36,18 @@
 <!-- ================= ACCOUNT ================= -->
 <main>
 
-<section class="account-wrapper">
-  <div class="account-card">
+<section class="section account-center">
+  <div class="account-box">
 
-    <h1>Account</h1>
-    <p class="subtitle">Sign in or create an account to continue</p>
+    <!-- TITLE -->
+    <h1 style="text-align:center; font-size:32px; margin-bottom:6px;">Account</h1>
+    <p style="text-align:center; color:#64748b; margin-bottom:30px;">
+      Sign in or create an account to continue
+    </p>
 
     <!-- SIGN IN -->
-    <h2>Sign In</h2>
+    <h2 style="margin-bottom:12px;">Sign In</h2>
+
     <form class="account-form">
       <input type="email" placeholder="Email address" required>
       <input type="password" placeholder="Password" required>
@@ -52,39 +56,56 @@
         <label>
           <input type="checkbox"> Remember me
         </label>
-        <a href="#">Forgot password?</a>
+        <a href="javascript:void(0)" onclick="toggleForgot()" style="color:#2563eb; cursor:pointer;">
+          Forgot password?
+        </a>
       </div>
 
-      <button type="submit" class="primary-btn">Login</button>
+      <button type="submit">Login</button>
     </form>
 
     <!-- SOCIAL LOGIN -->
-    <div class="social-login">
-      <button class="social-btn">Continue with Google</button>
-      <button class="social-btn">Continue with Facebook</button>
+    <div class="social-login" style="margin-top:22px;">
+      <button class="social-btn google-btn" onclick="startLoading(this)">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" width="20">
+        Continue with Google
+      </button>
+
+      <button class="social-btn microsoft-btn" onclick="startLoading(this)">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" width="20">
+        Continue with Microsoft
+      </button>
+
+      <button class="social-btn facebook-btn" onclick="startLoading(this)">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" width="20">
+        Continue with Facebook
+      </button>
     </div>
 
-    <!-- RESET PASSWORD (Always Visible) -->
-    <div class="reset-section">
-      <h3>Reset Password</h3>
-      <p>Enter your email to receive a reset link.</p>
+    <!-- FORGOT PASSWORD -->
+    <div id="forgot-box" style="display:none; margin-top:30px;">
+      <h3 style="text-align:center; margin-bottom:8px;">Reset Password</h3>
+      <p style="text-align:center; color:#6b7280; margin-bottom:18px;">
+        Enter your email to receive a reset link.
+      </p>
 
       <form class="account-form">
         <input type="email" placeholder="Email address" required>
-        <button type="submit" class="primary-btn">Send Reset Link</button>
+        <button type="submit">Send Reset Link</button>
       </form>
     </div>
 
     <!-- DIVIDER -->
-    <div class="divider">— New to EasyMart? —</div>
+    <div class="account-divider">— New to EasyMart? —</div>
 
     <!-- SIGN UP -->
-    <h2>Create Account</h2>
+    <h2 style="margin-bottom:12px;">Create Account</h2>
+
     <form class="account-form">
       <input type="text" placeholder="Full name" required>
       <input type="email" placeholder="Email address" required>
       <input type="password" placeholder="Create password" required>
-      <button type="submit" class="primary-btn">Sign Up</button>
+      <button type="submit">Sign Up</button>
     </form>
 
   </div>
@@ -99,20 +120,17 @@
       <div class="foot-title">EasyMart</div>
       <p>Premium fashion & lifestyle essentials you can trust.</p>
     </div>
-
     <div>
       <div class="foot-title">Policies</div>
       <a class="foot-link">Returns</a>
       <a class="foot-link">Shipping</a>
       <a class="foot-link">Privacy</a>
     </div>
-
     <div>
       <div class="foot-title">Support</div>
       <a class="foot-link">FAQ</a>
       <a class="foot-link" href="contact.html">Contact</a>
     </div>
-
     <div>
       <div class="foot-title">Follow Us</div>
       <a class="foot-link">Instagram</a>
@@ -126,5 +144,20 @@
   </div>
 </footer>
 
+<!-- ================= SCRIPT ================= -->
+<script>
+function toggleForgot() {
+  const box = document.getElementById("forgot-box");
+  box.style.display = box.style.display === "block" ? "none" : "block";
+}
+
+function startLoading(btn) {
+  btn.innerHTML = '<div class="spinner"></div>';
+  btn.disabled = true;
+  btn.style.opacity = "0.7";
+}
+</script>
+
 </body>
 </html>
+
