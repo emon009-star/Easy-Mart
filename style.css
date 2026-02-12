@@ -1000,3 +1000,30 @@ input[type="email"] {
 .account-box .grid {
   display: block !important;
 }
+/* Make inputs and button smaller and neat */
+.account-box input[type="email"],
+.account-box input[type="password"] {
+  width: 100%;
+  padding: 10px 12px; /* reduced padding */
+  margin-bottom: 14px; /* less spacing */
+  border-radius: 10px;
+  border: 1px solid #cbd5f5;
+  font-size: 15px; /* smaller font */
+}
+
+.account-box button {
+  width: 100%;
+  padding: 12px; /* smaller button height */
+  border-radius: 25px;
+  font-size: 15px;
+}
+.social-btn {
+  padding: 8px 14px; /* smaller buttons */
+  font-size: 14px;
+  min-width: 120px;
+  border-radius: 25px;
+}
+.social-btn img {
+  width: 18px; /* smaller icon */
+  margin-right: 6px;
+}
