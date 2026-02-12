@@ -1027,3 +1027,18 @@ input[type="email"] {
   width: 18px; /* smaller icon */
   margin-right: 6px;
 }
+/* Force compact email/password inputs */
+.account-box input[type="email"],
+.account-box input[type="password"] {
+  padding: 10px 12px !important;
+  font-size: 15px !important;
+  margin-bottom: 12px !important;
+  border-radius: 10px !important;
+}
+
+/* Force compact login button */
+.account-box button {
+  padding: 12px !important;
+  font-size: 15px !important;
+  border-radius: 25px !important;
+}
