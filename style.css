@@ -1023,6 +1023,16 @@ input[type="email"] {
   min-width: 120px;
   border-radius: 25px;
 }
+/* Apple social button - dark but lighter */
+.social-btn.apple {
+  background: #2c2c2c; /* dark gray, lighter than pure black */
+  color: #ffffff;
+}
+
+.social-btn.apple:hover {
+  background: #3a3a3a; /* slightly lighter on hover */
+}
+
 .social-btn img {
   width: 18px; /* smaller icon */
   margin-right: 6px;
