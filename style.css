@@ -1052,3 +1052,7 @@ input[type="email"] {
   font-size: 15px !important;
   border-radius: 25px !important;
 }
+/* Make Apple logo white */
+.social-btn.apple img {
+  filter: invert(1); /* forces the logo to white */
+}
