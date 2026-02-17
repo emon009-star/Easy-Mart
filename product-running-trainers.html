@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Running Trainers - EasyMart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,9 +12,16 @@
 <header class="header">
   <nav class="nav">
     <div class="brand">
-      <img src="images/easy.jpg" class="brand-logo-img">
+      <img src="images/easy.jpg" alt="EasyMart Logo" class="brand-logo-img">
       <span class="brand-name">EasyMart</span>
     </div>
+
+    <div class="header-icons">
+      <input type="text" placeholder="Search products..." aria-label="Search products">
+      <button title="Cart" aria-label="Cart">🛒 Cart</button>
+      <button title="Login" aria-label="Login">👤 Login</button>
+    </div>
+
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="shop.html">Shop</a>
@@ -24,9 +32,9 @@
   </nav>
 </header>
 
-<!-- ================= PRODUCT DETAILS ================= -->
+<!-- ================= PRODUCT DETAIL ================= -->
 <section class="section">
-  <div class="product-detail">
+  <div class="product-detail glass">
 
     <div class="product-image">
       <img src="images/running trainer.jpg" alt="Running Trainers">
@@ -38,9 +46,8 @@
 
       <p class="description">
         Lightweight, breathable, and built for performance.  
-        These running trainers offer excellent cushioning, strong grip,  
-        and long‑lasting comfort — perfect for workouts, jogging,  
-        and everyday active wear.
+        Excellent cushioning, strong grip, and long-lasting comfort.  
+        Perfect for workouts, jogging, and everyday active wear.
       </p>
 
       <div class="product-selectors">
@@ -82,33 +89,36 @@
 <!-- ================= CUSTOMER REVIEWS ================= -->
 <section class="section reviews">
   <h2>Customer Reviews</h2>
+  <div class="grid">
 
-  <div class="review">
-    <strong>Jake M.</strong>
-    <p>⭐⭐⭐⭐⭐</p>
-    <p>Super comfortable and lightweight. I run daily and these have held up amazingly well.</p>
-  </div>
+    <div class="review glass">
+      <p class="stars">★★★★★</p>
+      <p>"Super comfortable and lightweight. I run daily and these have held up amazingly well."</p>
+      <span class="reviewer">— Jake M.</span>
+    </div>
 
-  <div class="review">
-    <strong>Ryan T.</strong>
-    <p>⭐⭐⭐⭐</p>
-    <p>Good grip and cushioning. Great for the gym and outdoor runs.</p>
-  </div>
+    <div class="review glass">
+      <p class="stars">★★★★☆</p>
+      <p>"Good grip and cushioning. Great for the gym and outdoor runs."</p>
+      <span class="reviewer">— Ryan T.</span>
+    </div>
 
-  <div class="review">
-    <strong>Leo S.</strong>
-    <p>⭐⭐⭐⭐⭐</p>
-    <p>Best trainers I’ve bought in years. Fit perfectly and look great too.</p>
+    <div class="review glass">
+      <p class="stars">★★★★★</p>
+      <p>"Best trainers I’ve bought in years. Fit perfectly and look great too."</p>
+      <span class="reviewer">— Leo S.</span>
+    </div>
+
   </div>
 </section>
 
 <!-- ================= RELATED PRODUCTS ================= -->
-<section class="section related-products">
-  <h2>Our Top Suggestions</h2>
+<section class="section">
+  <h2>Related Products</h2>
   <div class="grid">
 
     <article class="card">
-      <img src="images/Formal shoes.jpg">
+      <img src="images/Formal shoes.jpg" alt="Formal Shoes">
       <div class="card-body">
         <div class="title">Formal Shoes</div>
         <div class="price">£120.00</div>
@@ -117,20 +127,20 @@
     </article>
 
     <article class="card">
-      <img src="images/top sneaker.jpg">
+      <img src="images/top sneaker.jpg" alt="High-Top Sneakers">
       <div class="card-body">
-        <div class="title">High‑Top Sneakers</div>
+        <div class="title">High-Top Sneakers</div>
         <div class="price">£95.00</div>
         <a href="product-high-top-sneakers.html"><button class="add-to-cart-btn">View</button></a>
       </div>
     </article>
 
     <article class="card">
-      <img src="images/sneaker.jpg">
+      <img src="images/minimalistwatch.jpg" alt="Minimalist Watch">
       <div class="card-body">
-        <div class="title">White Court Sneakers</div>
-        <div class="price">£70.00</div>
-        <a href="product-white-court-sneakers.html"><button class="add-to-cart-btn">View</button></a>
+        <div class="title">Minimalist Watch</div>
+        <div class="price">£99.00</div>
+        <a href="product-minimalist-watch.html"><button class="add-to-cart-btn">View</button></a>
       </div>
     </article>
 
@@ -142,20 +152,20 @@
   <div class="footer-inner">
     <div>
       <div class="foot-title">Policies</div>
-      <a class="foot-link">Returns</a>
-      <a class="foot-link">Shipping</a>
-      <a class="foot-link">Privacy</a>
+      <a class="foot-link" href="#">Returns</a>
+      <a class="foot-link" href="#">Shipping</a>
+      <a class="foot-link" href="#">Privacy</a>
     </div>
     <div>
       <div class="foot-title">Support</div>
-      <a class="foot-link">FAQ</a>
+      <a class="foot-link" href="#">FAQ</a>
       <a class="foot-link" href="contact.html">Contact</a>
     </div>
     <div>
       <div class="foot-title">Follow Us</div>
-      <a class="foot-link">Instagram</a>
-      <a class="foot-link">TikTok</a>
-      <a class="foot-link">Facebook</a>
+      <a class="foot-link" href="#">Instagram</a>
+      <a class="foot-link" href="#">TikTok</a>
+      <a class="foot-link" href="#">Facebook</a>
     </div>
   </div>
 </footer>
