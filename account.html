@@ -2,113 +2,223 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Account Login - EasyMart</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <title>EasyMart - Account</title>
+  <link rel="stylesheet" href="easymart.css"> <!-- Your main CSS -->
+  <style>
+    /* Tab styles */
+    .tab-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .tab {
+      padding: 10px 25px;
+      cursor: pointer;
+      font-weight: 600;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+      color: #1e40af;
+    }
+
+    .tab.active {
+      border-bottom: 3px solid #2563eb;
+      font-weight: 700;
+      color: #2563eb;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Social buttons */
+    .social-login button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      font-weight: 600;
+      color: #fff;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .social-login button img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .social-login .google { background: #4285F4; }
+    .social-login .google:hover { background: #357ae8; }
+    .social-login .facebook { background: #1877F2; }
+    .social-login .facebook:hover { background: #145dbf; }
+    .social-login .apple { background: #000; }
+    .social-login .apple:hover { background: #333; }
+
+    .or-divider {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 14px;
+      color: #4b5563;
+    }
+  </style>
 </head>
 <body>
 
-<!-- ================= HEADER ================= -->
-<header class="header">
-  <nav class="nav">
-    <div class="brand">
-      <img src="images/easy.jpg" alt="EasyMart Logo" class="brand-logo-img">
-      <span class="brand-name">EasyMart</span>
-    </div>
-
-    <div class="header-icons">
-      <input type="text" placeholder="Search products..." aria-label="Search products">
-      <button title="Cart" aria-label="Cart">🛒 Cart</button>
-      <button title="Login" aria-label="Login">👤 Login</button>
-    </div>
-
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="shop.html">Shop</a>
-      <a href="account.html">Account</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
-</header>
-
-<!-- ================= ACCOUNT LOGIN ================= -->
-<section class="section account-center">
-  <div class="account-box glass">
-
-    <h2>Login to Your Account</h2>
-
-    <!-- Standard login form -->
-    <form action="login-process.php" method="POST" class="account-form">
-      <input type="email" name="email" placeholder="Email Address" required>
-      <input type="password" name="password" placeholder="Password" required>
-      <button type="submit">Login</button>
-    </form>
-
-    <!-- Social login -->
-    <div class="social-login">
-      <p>Or login with</p>
-      <div class="social-buttons">
-        <button class="social-btn google">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/google.svg" alt="Google"> Google
-        </button>
-        <button class="social-btn facebook">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"> Facebook
-        </button>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="nav">
+      <div class="brand">
+        <img src="logo.png" alt="EasyMart Logo" class="brand-logo-img">
+        <span class="brand-name">EasyMart</span>
+      </div>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="header-icons">
+        <input type="text" placeholder="Search...">
+        <button>Cart</button>
       </div>
     </div>
+  </header>
 
-    <!-- Links -->
-    <div class="links">
-      <p><a href="forgot-password.html">Forgot Password?</a></p>
-      <p><a href="register.html">Create an Account</a></p>
+  <!-- ACCOUNT SECTION -->
+  <section class="section" style="display:flex; justify-content:center; align-items:center; min-height:80vh;">
+    <div class="glass" style="max-width:400px; width:100%; padding:40px;">
+      
+      <!-- Tabs -->
+      <div class="tab-container">
+        <div class="tab active" data-tab="login">Login</div>
+        <div class="tab" data-tab="signup">Sign Up</div>
+      </div>
+
+      <!-- LOGIN TAB -->
+      <div class="tab-content active" id="login">
+        <form class="contact-form">
+          <input type="email" placeholder="Email Address" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit" class="btn-premium">Login</button>
+        </form>
+
+        <div class="or-divider">── OR LOGIN WITH ──</div>
+
+        <div class="social-login">
+          <button class="google">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google Logo">
+            Login with Google
+          </button>
+          <button class="facebook">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook Logo">
+            Login with Facebook
+          </button>
+          <button class="apple">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Logo">
+            Login with Apple
+          </button>
+        </div>
+
+        <p style="text-align:center; margin-top:20px; font-size:14px;">
+          <a href="#">Forgot Password?</a>
+        </p>
+      </div>
+
+      <!-- SIGN UP TAB -->
+      <div class="tab-content" id="signup">
+        <form class="contact-form">
+          <input type="text" placeholder="Full Name" required>
+          <input type="email" placeholder="Email Address" required>
+          <input type="password" placeholder="Password" required>
+          <input type="password" placeholder="Confirm Password" required>
+          <button type="submit" class="btn-premium">Sign Up</button>
+        </form>
+
+        <div class="or-divider">── OR SIGN UP WITH ──</div>
+
+        <div class="social-login">
+          <button class="google">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google Logo">
+            Sign up with Google
+          </button>
+          <button class="facebook">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook Logo">
+            Sign up with Facebook
+          </button>
+          <button class="apple">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Logo">
+            Sign up with Apple
+          </button>
+        </div>
+
+        <p style="text-align:center; margin-top:20px; font-size:14px;">
+          Already have an account? <span class="tab-switch" style="color:#2563eb; cursor:pointer;">Login</span>
+        </p>
+      </div>
+
     </div>
+  </section>
 
-  </div>
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer class="footer-premium">
-  <div class="footer-container">
-
-    <div class="footer-col">
-      <h3>EasyMart</h3>
-      <p>Your trusted destination for quality products and exceptional service.</p>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h3>EasyMart</h3>
+        <p>Your one-stop shop for everything you need.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Email: support@easymart.com</p>
+        <p>Phone: +1 234 567 890</p>
+      </div>
     </div>
-
-    <div class="footer-col">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+    <div class="footer-bottom">
+      &copy; 2026 EasyMart. All Rights Reserved.
     </div>
+  </footer>
 
-    <div class="footer-col">
-      <h4>Support</h4>
-      <ul>
-        <li><a href="#">FAQs</a></li>
-        <li><a href="#">Shipping Info</a></li>
-        <li><a href="#">Returns</a></li>
-        <li><a href="#">Customer Service</a></li>
-      </ul>
-    </div>
+  <!-- TAB SWITCH SCRIPT -->
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
 
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <p>Email: support@easymart.com</p>
-      <p>Phone: +44 1234 567890</p>
-      <p>London, United Kingdom</p>
-    </div>
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
 
-  </div>
+        const target = tab.dataset.tab;
+        contents.forEach(c => {
+          c.id === target ? c.classList.add('active') : c.classList.remove('active');
+        });
+      });
+    });
 
-  <div class="footer-bottom">
-    <p>© 2026 EasyMart. All rights reserved.</p>
-  </div>
-</footer>
+    // Optional: Switch from signup text link
+    document.querySelectorAll('.tab-switch').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.tab[data-tab="login"]').click();
+      });
+    });
+  </script>
 
 </body>
 </html>
