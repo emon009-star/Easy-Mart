@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>EasyMart - Account</title>
-  <link rel="stylesheet" href="easymart.css">
+  <title>Account Login - EasyMart</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     /* =========================
-       ACCOUNT LOGIN/SIGN-UP TABS
+       ACCOUNT LOGIN/SIGN-UP TABS (using your CSS)
     ========================= */
     .account-box {
       max-width: 400px;
@@ -18,7 +18,6 @@
       box-shadow: 0 25px 60px rgba(0,0,0,0.12);
     }
 
-    /* Tab controls */
     .tabs {
       display: flex;
       justify-content: center;
@@ -64,16 +63,16 @@
       max-height: 1000px;
     }
 
-    /* Inputs & buttons */
+    /* Keep your input/button styles */
     .account-box input[type="email"],
     .account-box input[type="password"],
     .account-box input[type="text"] {
       width: 100%;
-      padding: 10px 12px;
-      margin-bottom: 12px;
-      border-radius: 10px;
+      padding: 10px 12px !important;
+      margin-bottom: 12px !important;
+      border-radius: 10px !important;
       border: 1px solid #cbd5f5;
-      font-size: 15px;
+      font-size: 15px !important;
       outline: none;
     }
 
@@ -84,12 +83,12 @@
 
     .account-box button {
       width: 100%;
-      padding: 12px;
-      border-radius: 25px;
+      padding: 12px !important;
+      border-radius: 25px !important;
       border: none;
       background: linear-gradient(135deg, #2563eb, #1e40af);
       color: #fff;
-      font-size: 15px;
+      font-size: 15px !important;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.3s ease;
@@ -125,27 +124,29 @@
       min-width: 120px;
     }
     .social-btn img { width: 18px; margin-right: 6px; }
-    .social-btn.google { background:#db4437; } .social-btn.google:hover { background:#c33d2f; }
-    .social-btn.facebook { background:#1877f2; } .social-btn.facebook:hover { background:#135fcc; }
-    .social-btn.apple { background:#000; } .social-btn.apple:hover { background:#333; }
+    .social-btn.google { background: #db4437; }
+    .social-btn.google:hover { background: #c33d2f; }
+    .social-btn.apple { background: #000; }
+    .social-btn.apple:hover { background: #333; }
+    .social-btn.facebook { background: #1877f2; }
+    .social-btn.facebook:hover { background: #135fcc; }
 
     /* Links */
-    .account-box .links { text-align:center; margin-top:16px; }
-    .account-box .links a { color:#2563eb; text-decoration:none; font-weight:500; }
-    .account-box .links a:hover { text-decoration:underline; }
+    .account-box .links { text-align: center; margin-top: 16px; }
+    .account-box .links a { color: #2563eb; text-decoration: none; font-weight: 500; }
+    .account-box .links a:hover { text-decoration: underline; }
 
-    /* Responsive */
-    @media (max-width:480px){
-      .account-box { padding:25px 20px; margin:60px 20px; }
-      .social-btn { font-size:13px; padding:6px 10px; min-width:100px; }
+    @media (max-width: 480px) {
+      .account-box { padding: 25px 20px; margin: 60px 20px; }
+      .social-btn { font-size: 13px; padding: 6px 10px; min-width: 100px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- HEADER / NAVBAR (UNCHANGED) -->
   <header class="header">
-    <div class="nav">
+    <nav class="nav">
       <div class="brand">
         <img src="images/easy.jpg" alt="EasyMart Logo" class="brand-logo-img">
         <span class="brand-name">EasyMart</span>
@@ -157,22 +158,24 @@
         <a href="account.html">Account</a>
         <a href="contact.html">Contact</a>
       </div>
-    </div>
+    </nav>
   </header>
 
-  <!-- ACCOUNT LOGIN / SIGN-UP -->
+  <!-- ACCOUNT LOGIN / SIGN-UP (Tabbed) -->
   <section class="section account-center">
     <div class="account-box glass">
       <input type="radio" id="login-tab" name="tab" checked>
       <input type="radio" id="signup-tab" name="tab">
 
+      <!-- Tabs -->
       <div class="tabs">
         <label for="login-tab">Login</label>
         <label for="signup-tab">Sign Up</label>
       </div>
 
+      <!-- Content -->
       <div class="content">
-        <!-- LOGIN -->
+        <!-- LOGIN FORM -->
         <div class="tab-content" id="login-content">
           <form action="login-process.php" method="POST">
             <input type="email" name="email" placeholder="Email Address" required>
@@ -187,10 +190,12 @@
               <button class="social-btn apple"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/apple.svg" alt="Apple"> Apple</button>
             </div>
           </div>
-          <div class="links"><p><a href="forgot-password.html">Forgot Password?</a></p></div>
+          <div class="links">
+            <p><a href="forgot-password.html">Forgot Password?</a></p>
+          </div>
         </div>
 
-        <!-- SIGN UP -->
+        <!-- SIGN UP FORM -->
         <div class="tab-content" id="signup-content">
           <form action="register-process.php" method="POST">
             <input type="text" name="name" placeholder="Full Name" required>
@@ -207,13 +212,15 @@
               <button class="social-btn apple"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/apple.svg" alt="Apple"> Apple</button>
             </div>
           </div>
-          <div class="links"><p><a href="login.html">Already have an account? Login</a></p></div>
+          <div class="links">
+            <p><a href="login.html">Already have an account? Login</a></p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (UNCHANGED) -->
   <footer class="footer-premium">
     <div class="footer-container">
       <div class="footer-col">
