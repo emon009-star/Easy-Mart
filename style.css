@@ -381,49 +381,157 @@ button {
   color: #1e40af;
 }
 
-/* ===== ACCOUNT PAGE ===== */
+/* =========================
+   ACCOUNT PAGE STYLES - FULL
+========================= */
+
+/* Container for login card */
 .account-box {
   max-width: 480px;
   margin: 100px auto;
   padding: 45px 40px;
   border-radius: 22px;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(14px);
   box-shadow: 0 25px 60px rgba(0,0,0,0.12);
 }
 
+/* Heading */
+.account-box h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e40af;
+}
+
+/* Email and Password Inputs */
 .account-box input[type="email"],
 .account-box input[type="password"] {
   width: 100%;
-  padding: 10px 12px;
-  margin-bottom: 12px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
   border-radius: 10px;
   border: 1px solid #cbd5f5;
   font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
 }
 
-.account-box input:focus {
+.account-box input:focus,
+.account-box input[type="password"]:focus {
   border-color: #2563eb;
   box-shadow: 0 0 10px rgba(37,99,235,0.35);
 }
 
-.account-box button {
+/* Login Button */
+.account-box button.login-btn {
   width: 100%;
-  padding: 12px;
-  border-radius: 25px;
+  padding: 14px;
+  border-radius: 28px;
   border: none;
   background: linear-gradient(135deg, #2563eb, #1e40af);
   color: #fff;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   transition: all 0.3s ease;
 }
 
-.account-box button:hover {
+.account-box button.login-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 25px rgba(37,99,235,0.35);
   background: linear-gradient(135deg, #1e40af, #2563eb);
 }
+
+/* Remember / Forgot Row */
+.account-options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Links below login */
+.account-box .links {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.account-box .links a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.account-box .links a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   SOCIAL LOGIN BUTTONS
+========================= */
+.social-login p {
+  margin-bottom: 12px;
+  color: #1f2937;
+  font-weight: 500;
+  text-align: center;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 14px;
+  border-radius: 25px;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  color: #fff;
+  min-width: 120px;
+  transition: all 0.3s ease;
+}
+
+.social-btn img {
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+}
+
+/* Platform colors */
+.social-btn.google { background: #db4437; }
+.social-btn.google:hover { background: #c33d2f; }
+
+.social-btn.facebook { background: #1877f2; }
+.social-btn.facebook:hover { background: #135fcc; }
+
+.social-btn.apple { background: #000; }
+.social-btn.apple:hover { background: #333; }
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 480px) {
+  .account-box {
+    padding: 25px 20px;
+    margin: 60px 20px;
+  }
+
+  .social-btn {
+    font-size: 13px;
+    padding: 5px 12px;
+    min-width: 100px;
+  }
+}
+
 
 /* ===== FOOTER ===== */
 .footer,
