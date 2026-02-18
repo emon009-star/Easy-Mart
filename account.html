@@ -1,13 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Account Login - EasyMart</title>
-  <link rel="stylesheet" href="style.css">
+  <title>EasyMart - Account</title>
+  <link rel="stylesheet" href="easymart.css">
   <style>
     /* =========================
-       ACCOUNT LOGIN STYLES
+       ACCOUNT LOGIN TABS WITH ANIMATION
     ========================= */
     .account-box {
       max-width: 400px;
@@ -19,23 +18,60 @@
       box-shadow: 0 25px 60px rgba(0,0,0,0.12);
     }
 
-    /* Heading */
-    .account-box h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 28px;
-      color: #1e40af;
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 25px;
+      gap: 20px;
     }
 
-    /* Compact email/password inputs */
+    .tabs label {
+      cursor: pointer;
+      padding: 10px 20px;
+      font-weight: 600;
+      border-bottom: 2px solid transparent;
+      color: #1e40af;
+      transition: all 0.3s ease;
+    }
+
+    .tabs label:hover { color: #2563eb; }
+
+    input[type="radio"] { display: none; }
+
+    #login-tab:checked ~ .tabs label[for="login-tab"],
+    #signup-tab:checked ~ .tabs label[for="signup-tab"] {
+      border-bottom: 3px solid #2563eb;
+      font-weight: 700;
+      color: #2563eb;
+    }
+
+    /* Tab content animation */
+    .tab-content {
+      opacity: 0;
+      transform: translateY(20px);
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+
+    #login-tab:checked ~ .content #login-content,
+    #signup-tab:checked ~ .content #signup-content {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+      max-height: 1000px; /* enough for content */
+    }
+
+    /* Form inputs/buttons */
     .account-box input[type="email"],
-    .account-box input[type="password"] {
+    .account-box input[type="password"],
+    .account-box input[type="text"] {
       width: 100%;
-      padding: 10px 12px !important;
-      margin-bottom: 12px !important;
-      border-radius: 10px !important;
+      padding: 10px 12px;
+      margin-bottom: 12px;
+      border-radius: 10px;
       border: 1px solid #cbd5f5;
-      font-size: 15px !important;
+      font-size: 15px;
       outline: none;
     }
 
@@ -44,15 +80,14 @@
       box-shadow: 0 0 10px rgba(37, 99, 235, 0.35);
     }
 
-    /* Compact login button */
     .account-box button {
       width: 100%;
-      padding: 12px !important;
-      border-radius: 25px !important;
+      padding: 12px;
+      border-radius: 25px;
       border: none;
       background: linear-gradient(135deg, #2563eb, #1e40af);
       color: #fff;
-      font-size: 15px !important;
+      font-size: 15px;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.3s ease;
@@ -64,29 +99,8 @@
       background: linear-gradient(135deg, #1e40af, #2563eb);
     }
 
-    /* Links */
-    .account-box .links {
-      text-align: center;
-      margin-top: 16px;
-    }
-
-    .account-box .links a {
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .account-box .links a:hover {
-      text-decoration: underline;
-    }
-
-    /* Social login buttons */
-    .social-login p {
-      margin-bottom: 12px;
-      color: #1f2937;
-      font-weight: 500;
-      text-align: center;
-    }
+    /* Social login */
+    .social-login p { margin-bottom: 12px; text-align:center; font-weight:500; color:#1f2937; }
 
     .social-buttons {
       display: flex;
@@ -111,30 +125,29 @@
       min-width: 120px;
     }
 
-    .social-btn img {
-      width: 18px;
-      margin-right: 6px;
-    }
+    .social-btn img { width: 18px; margin-right: 6px; }
 
     .social-btn.google { background: #db4437; }
     .social-btn.google:hover { background: #c33d2f; }
-
-    .social-btn.apple { background: #000000; }
-    .social-btn.apple:hover { background: #333333; }
-
+    .social-btn.apple { background: #000; }
+    .social-btn.apple:hover { background: #333; }
     .social-btn.facebook { background: #1877f2; }
     .social-btn.facebook:hover { background: #135fcc; }
 
-    /* Responsive adjustments */
-    @media (max-width: 480px) {
-      .account-box { padding: 25px 20px; margin: 60px 20px; }
-      .social-btn { font-size: 13px; padding: 6px 10px; min-width: 100px; }
+    /* Links */
+    .account-box .links { text-align:center; margin-top:16px; }
+    .account-box .links a { color:#2563eb; text-decoration:none; font-weight:500; }
+    .account-box .links a:hover { text-decoration:underline; }
+
+    @media (max-width:480px) {
+      .account-box { padding:25px 20px; margin:60px 20px; }
+      .social-btn { font-size:13px; padding:6px 10px; min-width:100px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER / NAVBAR -->
+  <!-- HEADER -->
   <header class="header">
     <nav class="nav">
       <div class="brand">
@@ -151,35 +164,55 @@
     </nav>
   </header>
 
-  <!-- ACCOUNT LOGIN SECTION -->
+  <!-- ACCOUNT LOGIN / SIGN-UP -->
   <section class="section account-center">
     <div class="account-box glass">
+      <input type="radio" id="login-tab" name="tab" checked>
+      <input type="radio" id="signup-tab" name="tab">
 
-      <h2>Login to Your Account</h2>
-      
-      <!-- Standard login form -->
-      <form action="login-process.php" method="POST">
-        <input type="email" name="email" placeholder="Email Address" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <button type="submit">Login</button>
-      </form>
-
-      <!-- Social login -->
-      <div class="social-login">
-        <p>Or login with</p>
-        <div class="social-buttons">
-          <button class="social-btn google">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/google.svg" alt="Google"> Google
-          <button class="social-btn facebook">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"> Facebook
-          </button>
-        </div>
+      <div class="tabs">
+        <label for="login-tab">Login</label>
+        <label for="signup-tab">Sign Up</label>
       </div>
 
-      <!-- Links -->
-      <div class="links">
-        <p><a href="forgot-password.html">Forgot Password?</a></p>
-        <p><a href="register.html">Create an Account</a></p>
+      <div class="content">
+        <!-- LOGIN -->
+        <div class="tab-content" id="login-content">
+          <form action="login-process.php" method="POST">
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+          </form>
+          <div class="social-login">
+            <p>Or login with</p>
+            <div class="social-buttons">
+              <button class="social-btn google"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/google.svg" alt="Google"> Google</button>
+              <button class="social-btn facebook"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"> Facebook</button>
+              <button class="social-btn apple"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/apple.svg" alt="Apple"> Apple</button>
+            </div>
+          </div>
+          <div class="links"><p><a href="forgot-password.html">Forgot Password?</a></p></div>
+        </div>
+
+        <!-- SIGN UP -->
+        <div class="tab-content" id="signup-content">
+          <form action="register-process.php" method="POST">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm-password" placeholder="Confirm Password" required>
+            <button type="submit">Sign Up</button>
+          </form>
+          <div class="social-login">
+            <p>Or sign up with</p>
+            <div class="social-buttons">
+              <button class="social-btn google"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/google.svg" alt="Google"> Google</button>
+              <button class="social-btn facebook"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"> Facebook</button>
+              <button class="social-btn apple"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/apple.svg" alt="Apple"> Apple</button>
+            </div>
+          </div>
+          <div class="links"><p><a href="login.html">Already have an account? Login</a></p></div>
+        </div>
       </div>
     </div>
   </section>
@@ -187,12 +220,10 @@
   <!-- FOOTER -->
   <footer class="footer-premium">
     <div class="footer-container">
-
       <div class="footer-col">
         <h3>EasyMart</h3>
         <p>Your trusted destination for quality products and exceptional service.</p>
       </div>
-
       <div class="footer-col">
         <h4>Quick Links</h4>
         <ul>
@@ -202,7 +233,6 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
         <h4>Support</h4>
         <ul>
@@ -212,16 +242,13 @@
           <li><a href="#">Customer Service</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
         <h4>Contact</h4>
         <p>Email: support@easymart.com</p>
         <p>Phone: +44 1234 567890</p>
         <p>London, United Kingdom</p>
       </div>
-
     </div>
-
     <div class="footer-bottom">
       <p>© 2026 EasyMart. All rights reserved.</p>
     </div>
@@ -229,5 +256,3 @@
 
 </body>
 </html>
-
-
